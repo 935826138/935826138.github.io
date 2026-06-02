@@ -1,0 +1,185 @@
+/* TraderPilot — Clean, Professional Forex Affiliate Site */
+:root {
+  --bg: #0a0e14;
+  --surface: #141b22;
+  --border: #1e2937;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --gold: #f59e0b;
+  --green: #10b981;
+  --red: #ef4444;
+  --radius: 8px;
+  --max-width: 1100px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Nav */
+header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+}
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.4rem; font-weight: 700; color: var(--accent);
+  text-decoration: none;
+}
+.nav-links { display: flex; gap: 1.5rem; }
+.nav-links a {
+  color: var(--text-muted); text-decoration: none;
+  font-size: 0.95rem; transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+
+/* Hero */
+.hero {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 5rem 1.5rem 4rem;
+  text-align: center;
+}
+.hero h1 { font-size: 2.8rem; font-weight: 800; line-height: 1.2; margin-bottom: 1rem; }
+.hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; }
+.hero-cta { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-primary, .btn-secondary {
+  padding: 0.8rem 1.8rem; border-radius: var(--radius);
+  font-size: 1rem; font-weight: 600; text-decoration: none;
+  transition: all 0.2s;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
+.btn-secondary { background: var(--surface); color: var(--text); border: 1px solid var(--border); }
+.btn-secondary:hover { border-color: var(--accent); }
+
+/* Cards */
+.featured, .content-preview {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+.featured h2, .content-preview h2 {
+  font-size: 1.8rem; margin-bottom: 2rem; text-align: center;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.8rem;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: var(--accent); }
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.8rem; font-weight: 600;
+  background: #1e2937; color: var(--gold);
+  margin-bottom: 0.8rem;
+}
+.card h3 { font-size: 1.3rem; margin-bottom: 1rem; }
+.card ul { list-style: none; margin-bottom: 1.5rem; }
+.card ul li { padding: 0.3rem 0; color: var(--text-muted); font-size: 0.95rem; }
+.card ul li::before { content: "✓ "; color: var(--green); font-weight: bold; }
+.btn-card {
+  display: inline-block;
+  padding: 0.6rem 1.3rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 600; font-size: 0.9rem;
+  transition: background 0.2s;
+}
+.btn-card:hover { background: var(--accent-hover); }
+
+/* Guides */
+.guide-list article {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+.guide-list h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.guide-list h3 a { color: var(--text); text-decoration: none; }
+.guide-list h3 a:hover { color: var(--accent); }
+.guide-list p { color: var(--text-muted); font-size: 0.95rem; }
+
+/* Page Content */
+.page-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+.page-content h1 { font-size: 2.2rem; margin-bottom: 1.5rem; }
+.page-content h2 { font-size: 1.5rem; margin: 2rem 0 1rem; color: var(--accent); }
+.page-content h3 { font-size: 1.2rem; margin: 1.5rem 0 0.8rem; }
+.page-content p { margin-bottom: 1rem; color: var(--text-muted); }
+.page-content ul, .page-content ol { margin: 1rem 0 1rem 1.5rem; color: var(--text-muted); }
+.page-content li { margin-bottom: 0.5rem; }
+.comparison-table {
+  width: 100%; border-collapse: collapse; margin: 2rem 0;
+}
+.comparison-table th, .comparison-table td {
+  padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid var(--border);
+}
+.comparison-table th { background: var(--surface); font-weight: 600; color: var(--text); }
+.comparison-table td { color: var(--text-muted); }
+.comparison-table tr:hover td { background: var(--surface); }
+
+/* Footer */
+footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  margin-top: 3rem;
+  padding: 3rem 1.5rem 1.5rem;
+}
+.footer-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+.footer-col h4 { color: var(--text); margin-bottom: 0.8rem; }
+.footer-col p { color: var(--text-muted); font-size: 0.85rem; line-height: 1.7; }
+.footer-bottom {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+.footer-bottom a { color: var(--accent); text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero { padding: 3rem 1rem 2rem; }
+  .card-grid { grid-template-columns: 1fr; }
+  .footer-content { grid-template-columns: 1fr; }
+}
