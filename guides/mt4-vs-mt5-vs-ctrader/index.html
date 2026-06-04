@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Real-world comparison of MT4, MT5, and cTrader. We tested all three platforms with live accounts — here's which one wins for different trading styles in 2026.">
+  <title>MT4 vs MT5 vs cTrader: Which Platform Wins in 2026? — TraderPilot</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">TraderPilot</a>
+      <div class="nav-links">
+        <a href="/">Home</a>
+        <a href="/reviews/">Reviews</a>
+        <a href="/guides/">Guides</a>
+        <a href="/about/">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article class="page-content">
+      <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">
+        By Alex Long · June 4, 2026 · 9 min read
+      </p>
+      <h1>MT4 vs MT5 vs cTrader: Which Platform Wins in 2026?</h1>
+      <p style="font-size: 1.15rem; color: var(--text);">
+        I've traded real money on all three platforms. Here's an honest comparison — not the marketing version, but what it actually feels like to trade on each one day after day.
+      </p>
+
+      <h2>The Quick Answer</h2>
+      <p>
+        If you want me to cut to the chase: <strong>cTrader is the best manual trading platform. MT5 is the best for automated trading and backtesting. And MT4… MT4 is your grandfather's Corolla — it still runs, it'll get you there, but you're not excited about it.</strong>
+      </p>
+      <p>
+        But that's too simple. The right platform depends on what you actually do. A scalper, a swing trader, and an EA developer need different things. Let me break it down properly.
+      </p>
+
+      <h2>MT4: The King That Won't Abdicate</h2>
+      <p>
+        MetaTrader 4 launched in 2005. In tech years, that's ancient. Most software from 2005 is dead and buried. MT4 isn't just alive — it's still the most widely offered platform among forex brokers. That's wild.
+      </p>
+
+      <h3>What MT4 Gets Right</h3>
+      <ul>
+        <li><strong>Universal broker support.</strong> If a forex broker exists, they offer MT4. This matters — you can switch brokers without changing your entire workflow.</li>
+        <li><strong>Massive EA ecosystem.</strong> Tens of thousands of Expert Advisors, indicators, and scripts exist for MT4. The MQL4 community is huge, and you can find free or cheap EAs for almost anything.</li>
+        <li><strong>Simple and familiar.</strong> The interface is basic but functional. If you've watched any forex YouTuber, you've seen MT4. There's almost no learning curve.</li>
+        <li><strong>Lightweight.</strong> MT4 runs on potato computers. If you're on an old laptop or a VPS with minimal specs, MT4 barely touches the CPU.</li>
+      </ul>
+
+      <h3>Where MT4 Falls Short</h3>
+      <ul>
+        <li><strong>Single-threaded.</strong> MT4 only uses one CPU core. Backtesting a complex EA on 5 years of tick data? Go make coffee. Maybe lunch too.</li>
+        <li><strong>Limited order types.</strong> No buy stop limit, sell stop limit. If you want to bracket a breakout with precise entries, you're doing it manually or writing custom EAs.</li>
+        <li><strong>No depth of market (DOM) by default.</strong> You can see the chart, but you can't see the order book. Some brokers add DOM as a plugin, but it's clunky.</li>
+        <li><strong>MQL4 is showing its age.</strong> The language isn't bad, but it's limited compared to MQL5 or cTrader's C#. No OOP originally (added later, poorly). Debugging is painful.</li>
+      </ul>
+
+      <h2>MT5: The Actual Upgrade</h2>
+      <p>
+        MetaTrader 5 launched in 2010, and for years, brokers dragged their feet adopting it. That's finally changing. Most serious brokers offer MT5 now, and it's a genuine improvement over MT4.
+      </p>
+
+      <h3>What MT5 Gets Right</h3>
+      <ul>
+        <li><strong>Multi-threaded.</strong> Backtesting is dramatically faster. An EA that takes 40 minutes on MT4 might take 4 minutes on MT5. If you develop EAs, this alone is worth the switch.</li>
+        <li><strong>More timeframes.</strong> MT4 gives you 9 timeframes. MT5 gives you 21 — including M2, M3, M4, M6, M10, M12, H2, H3, H6, H8, and H12. For detailed analysis, this is a game changer.</li>
+        <li><strong>More order types.</strong> Buy stop limit, sell stop limit — finally. You can set entry orders with both a trigger price and a limit price. Essential for precise entries.</li>
+        <li><strong>Built-in economic calendar.</strong> No need to alt-tab to ForexFactory. It's right there in the platform with impact ratings and historical data.</li>
+        <li><strong>MQL5 is a real language.</strong> Object-oriented, proper debugging, faster execution. If you're learning to code EAs from scratch, start with MQL5.</li>
+      </ul>
+
+      <h3>Where MT5 Falls Short</h3>
+      <ul>
+        <li><strong>Still feels old.</strong> The UI is basically MT4 with a fresh coat of paint. It's functional, not elegant. cTrader makes MT5 feel like spreadsheet software.</li>
+        <li><strong>"Hedging mode" confusion.</strong> MT5 defaulted to netting (FIFO) for years, which angered the MT4 hedging crowd. Most brokers now offer "hedging mode" on MT5, but you need to check.</li>
+        <li><strong>EA migration pain.</strong> MQL4 EAs don't run on MT5 without conversion. Some tools automate this, but complex EAs often need manual rewriting.</li>
+      </ul>
+
+      <h2>cTrader: The Trader's Platform</h2>
+      <p>
+        cTrader was built by Spotware in 2011 specifically to compete with MetaTrader. The key difference: cTrader was designed as an ECN/STP platform from day one. No dealing desk. No B-book shenanigans. Just raw market access, and the interface shows it.
+      </p>
+
+      <h3>What cTrader Gets Right</h3>
+      <ul>
+        <li><strong>Modern, clean UI.</strong> cTrader looks and feels like a professional tool from 2026, not 2005. Detachable charts, dark mode by default, smooth animations. Trading feels fast and responsive.</li>
+        <li><strong>Level 2 pricing (Depth of Market).</strong> You can see the actual order book — bid/ask volumes at different price levels. This is standard on stock platforms but rare in retail forex. It helps you see where liquidity sits and avoid getting slipped on thin markets.</li>
+        <li><strong>Superior charting.</strong> cTrader's charts are better out of the box. More drawing tools, better zoom behavior, cleaner candlestick rendering. TradingView integration is also available on some brokers.</li>
+        <li><strong>cTrader Automate (C#).</strong> If you're a developer, this is paradise. You write bots in C# using Visual Studio — a real IDE with real debugging, not MetaEditor. The API is well-documented and flexible.</li>
+        <li><strong>No requotes.</strong> By design, cTrader is pure ECN/STP. If liquidity isn't available, you get slippage — not a popup asking you to accept a worse price.</li>
+        <li><strong>Copy trading built in.</strong> cTrader Copy is native to the platform, not a third-party bolt-on. If you want to follow signal providers, it's seamless.</li>
+      </ul>
+
+      <h3>Where cTrader Falls Short</h3>
+      <ul>
+        <li><strong>Smaller broker ecosystem.</strong> Far fewer brokers offer cTrader compared to MT4/MT5. If your preferred broker doesn't support it, you're out of luck.</li>
+        <li><strong>Smaller EA library.</strong> The cTrader community is growing but nowhere near MT4's size. Finding free indicators and bots takes more effort.</li>
+        <li><strong>Learning curve.</strong> If you've used MT4 for 10 years, cTrader's interface feels alien at first. It took me about a week to feel comfortable.</li>
+        <li><strong>No hedging.</strong> cTrader is netting-only by default. If you hedge positions (same symbol, opposite directions), this isn't your platform.</li>
+      </ul>
+
+      <h2>Head-to-Head Comparison</h2>
+      <table class="comparison-table">
+        <tr><th>Feature</th><th>MT4</th><th>MT5</th><th>cTrader</th></tr>
+        <tr><td>Launch Year</td><td>2005</td><td>2010</td><td>2011</td></tr>
+        <tr><td>Timeframes</td><td>9</td><td>21</td><td>26</td></tr>
+        <tr><td>Order Types</td><td>4</td><td>6</td><td>6+</td></tr>
+        <tr><td>Depth of Market</td><td>Limited</td><td>Yes</td><td>Yes (excellent)</td></tr>
+        <tr><td>Backtesting Speed</td><td>Slow (single core)</td><td>Fast (multi-core)</td><td>Fast (multi-core)</td></tr>
+        <tr><td>Automation Language</td><td>MQL4</td><td>MQL5</td><td>C# (.NET)</td></tr>
+        <tr><td>Hedging</td><td>Yes</td><td>Optional</td><td>No (netting)</td></tr>
+        <tr><td>Copy Trading</td><td>3rd party</td><td>Built-in signals</td><td>Native cTrader Copy</td></tr>
+        <tr><td>Broker Availability</td><td>Near universal</td><td>Growing fast</td><td>Limited but quality</td></tr>
+        <tr><td>UI Quality</td><td>Dated</td><td>Dated</td><td>Modern</td></tr>
+        <tr><td>Mobile App</td><td>Functional</td><td>Functional</td><td>Excellent</td></tr>
+      </table>
+
+      <h2>Which Platform Should You Choose?</h2>
+
+      <h3>Choose MT4 if:</h3>
+      <ul>
+        <li>Your broker only offers MT4 and you're happy with them</li>
+        <li>You rely on a specific EA that only exists for MT4</li>
+        <li>You trade on a very low-spec machine or VPS</li>
+        <li>You hedge positions and your broker's MT5 doesn't support it</li>
+      </ul>
+
+      <h3>Choose MT5 if:</h3>
+      <ul>
+        <li>You develop or run EAs — the backtesting speed alone is worth it</li>
+        <li>You need extra timeframes for precise analysis</li>
+        <li>You use advanced order types (buy stop limit, etc.)</li>
+        <li>You want the most broker support while getting modern features</li>
+      </ul>
+
+      <h3>Choose cTrader if:</h3>
+      <ul>
+        <li>You're a manual trader who values execution quality above everything</li>
+        <li>You want to see the order book (Level 2 depth of market)</li>
+        <li>You appreciate good UI/UX and modern design</li>
+        <li>You trade with an ECN broker that supports cTrader (IC Markets, Pepperstone)</li>
+        <li>You want built-in copy trading without third-party services</li>
+      </ul>
+
+      <h2>My Personal Setup</h2>
+      <p>
+        I use MT5 for charting and automated strategies. The multi-threaded backtester saves me hours every week when I'm testing new EAs. For manual execution — especially during news events where fills matter — I use cTrader. The Level 2 DOM helps me avoid placing orders into thin liquidity, and the execution speed is noticeably better on cTrader-supported brokers.
+      </p>
+      <p>
+        I keep MT4 installed because some older custom indicators I've built over the years only run on MT4. But if I was starting fresh in 2026, I'd skip MT4 entirely and go MT5 + cTrader.
+      </p>
+      <p>
+        The platform matters, but let's be real — a good trader can make money on any of these. A bad trader will lose money on all of them. Focus on your strategy and risk management first. The platform is just the tool.
+      </p>
+
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem;">
+        <em>Author: Alex Long — Independent forex trader and researcher. 10 years trading XAU/USD and crude oil. All platforms tested with live accounts and real money. No broker sponsorships.</em>
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>TraderPilot</h4>
+        <p>Independent forex broker reviews and trading education. We may earn commissions from affiliate links.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Disclaimer</h4>
+        <p>CFDs are complex instruments. 70-80% of retail investor accounts lose money. You should consider whether you understand how CFDs work and whether you can afford the high risk of losing your money.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 TraderPilot. All rights reserved. | <a href="/about/">About</a> | <a href="/privacy/">Privacy</a> | <a href="/disclaimer/">Risk Disclaimer</a></p>
+    </div>
+  </footer>
+</body>
+</html>
