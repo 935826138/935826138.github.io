@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stop loss placement and position sizing — the math that keeps you alive. Part 4 of Alex Long's trading framework.">
+  <title>Stop Loss & Position Sizing: The Math That Keeps Me Alive | TraderPilot</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/" class="logo">TraderPilot</a>
+      <div class="nav-links">
+        <a href="/">Home</a><a href="/reviews/">Reviews</a><a href="/guides/">Guides</a><a href="/trading-system/">Trading System</a><a href="/about/">About</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <article class="page-content">
+      <p style="color: var(--accent); font-size: 0.9rem; margin-bottom: 0.5rem;">By Alex Long · June 2026 · 7 min read · Part 4 of 6</p>
+      <h1>Stop Loss & Position Sizing: The Math That Keeps Me Alive</h1>
+
+      <p>If you take one thing from this entire series, take this: your stop loss and position size matter more than your entry. By a lot.</p>
+      <p>I can give you a random entry — literally flip a coin for long or short — and with proper stops and sizing, you can break even or turn a small profit over time. I can give you the best entry system in the world, and with bad stops and oversized positions, you will blow your account. This isn't theory. I've tested it. I've lived it. Three blown accounts taught me that entries are the least important part of trading.</p>
+
+      <h2>Stop Loss: Why I Place It Outside the Fractal</h2>
+      <p>I don't put my stop AT the fractal. I put it OUTSIDE the fractal.</p>
+      <p>For a short trade with a top fractal at 4488: my stop goes at 4488 + buffer (5-10 pips for gold) = 4493-4498. NOT at 4488.</p>
+      <p>For a long trade with a bottom fractal at 4398: my stop goes at 4398 - buffer = 4388-4393. NOT at 4398.</p>
+      <p>Why the buffer? Because markets hunt stops. Institutional traders and algorithms know where retail stops are clustered. They know fractal highs and lows are obvious stop locations. Pushing price 3 pips past a fractal to clean out stops before reversing is a Tuesday afternoon for them. Since adding the buffer, I still get stopped out — that's trading. But I don't get stopped out by 2-pip stop hunts that immediately reverse. The buffer pays for itself.</p>
+
+      <h2>The 10-Second Position Size Formula</h2>
+      <pre style="background:var(--surface); padding:1rem; border-radius:8px; font-size:0.9rem;">
+Step 1: Account risk = account balance × 1%
+Step 2: Stop distance = entry price - stop price (in pips)
+Step 3: Position size = account risk ÷ (stop distance × value per pip)</pre>
+      <p>Real numbers from my account: Balance AUD 2,704.82. Risk per trade AUD 27.05 (1%). Entry 4488 short XAUUSD. Stop 4495 (7 pip buffer). Stop distance 7 pips. Value per pip for 0.01 lot XAUUSD ≈ AUD 0.10.</p>
+      <p>Position = 27.05 ÷ (7 × 0.10 × 100) = 27.05 ÷ 70 = 0.38 lots → round down to 0.30.</p>
+      <p>I round down. Always. Being slightly undersized doesn't hurt you. Being slightly oversized does.</p>
+
+      <h2>Lot Size Cheat Sheet (XAUUSD)</h2>
+      <table class="comparison-table">
+        <tr><th>Account (AUD)</th><th>1% Risk</th><th>Stop 5 pips</th><th>Stop 10 pips</th><th>Stop 15 pips</th><th>Stop 20 pips</th></tr>
+        <tr><td>$1,000</td><td>$10</td><td>0.20</td><td>0.10</td><td>0.07</td><td>0.05</td></tr>
+        <tr><td>$2,000</td><td>$20</td><td>0.40</td><td>0.20</td><td>0.13</td><td>0.10</td></tr>
+        <tr><td>$5,000</td><td>$50</td><td>1.00</td><td>0.50</td><td>0.33</td><td>0.25</td></tr>
+        <tr><td>$10,000</td><td>$100</td><td>2.00</td><td>1.00</td><td>0.67</td><td>0.50</td></tr>
+      </table>
+
+      <h2>The Stop Should Only Move One Direction</h2>
+      <p>Once a stop is set, it can move in exactly one direction: in your favor. Toward breakeven. Never wider. Moving a stop wider means you made a mistake in your original analysis and you're hoping the market bails you out. It occasionally works, which makes it even more dangerous — you get rewarded for bad behavior.</p>
+      <p>I move my stop to breakeven when price reaches 1:1 R/R. Not before. Moving to breakeven too early means getting stopped out on normal noise. 1:1 is the sweet spot. After breakeven, I trail the stop based on structure — swing lows in an uptrend, swing highs in a downtrend.</p>
+
+      <h2>Correlation: The Hidden Account Killer</h2>
+      <p>Three trades open. All 1% risk. All "different" setups. Then a Fed headline hits. The dollar spikes. All three go against me simultaneously. My "three separate 1% risks" were actually one 3.6% risk because they were all short USD plays.</p>
+      <p><strong>My correlation rules:</strong> No more than two positions with the same base currency direction. Combined correlated risk ≤ 2%. Gold and oil can be traded simultaneously, but I check the reason.</p>
+
+      <h2>The Daily Loss Limit: My Best Rule</h2>
+      <p><strong>If I lose 3% of my account in a single day, I stop trading. No exceptions.</strong></p>
+      <p>Why 3%? Because 3% is recoverable. You can come back from 3% with a good week. 5% is where the spiral starts. 10% and the psychological damage is real. 20% and most traders never recover the account.</p>
+      <p>I've hit my 3% limit maybe 30 times in 10 years. Every single time I wanted to keep trading. Every single time I'm glad I didn't. The market was still there the next day.</p>
+
+      <nav style="margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border);">
+        <a href="/trading-system/entry-logic.html">← Part 3: Entry Logic</a>
+        <a href="/trading-system/take-profit-strategy.html" style="float:right;">Part 5: Take Profit Strategy →</a>
+      </nav>
+
+      <p style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border); color: var(--text-muted); font-size: 0.85rem;">
+        <em>Author: Alex Long — Independent forex trader and researcher. 10 years trading XAU/USD and crude oil.</em><br>
+        <em>Risk warning: This is educational content, not financial advice. Trading CFDs carries high risk.</em>
+      </p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col"><h4>TraderPilot</h4><p>Independent forex broker reviews and trading education. We may earn commissions from affiliate links.</p></div>
+      <div class="footer-col"><h4>Disclaimer</h4><p>CFDs are complex instruments. 70-80% of retail investor accounts lose money.</p></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 TraderPilot. | <a href="/about/">About</a> | <a href="/privacy/">Privacy</a> | <a href="/disclaimer/">Disclaimer</a></p></div>
+  </footer>
+</body>
+</html>
